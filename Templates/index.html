@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+      <img src="{{ url_for('static',filename= 'img/cover.png') }}" width="1350" height="446">
+  </a>
+  </div>
+<h1> Hello! </h1>
+<p>Browse through the links below to find the car that fits for you!</p>
+<button type="button" class="btn btn-outline-secondary btn-lg"><a href='/cars/Hatchback'>HATCHBACK</a></button>
+<button type="button" class="btn btn-outline-success btn-lg"><a href='/cars/Sedan'>SEDAN</a></button>
+<button type="button" class="btn btn-outline-danger btn-lg"><a href='/cars/Truck'>TRUCK</a></button>
+<button type="button" class="btn btn-outline-warning btn-lg"><a href='/cars/SUV'>SUV</a></button>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> {{ car_profile.Name }} </h1>
+<img src="{{ car_profile.url }}" alt="">
+<ul>
+    {% if car_profile.Transmission == "" %}
+    <li>Transmission: No data available</li>
+    {% else %}
+    <li>Transmission: {{ car_profile.Transmission }} </li>
+    {% endif %}
+    {% if car_profile.Odometer == "" %}
+    <li>Odometer: No data available</li>
+    {% else %}
+    <li>Odometer: {{ car_profile.Odometer }}</li>
+    {% endif %}
+    {% if car_profile.Details == "" %}
+    <li>Details: No data available</li>
+    {% else %}
+    <li>Details: {{ car_profile.Details }}</li>
+    {% endif %}
+</ul>
+{% endblock %}
